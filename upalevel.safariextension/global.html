@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>upalevel</title>
+	<meta name="generator" content="Your Mom." />
+	<script type="text/javascript" charset="utf-8">
+		function performCommand(event) {
+			if (event.command === "goUp") {
+				// grab the current tab's url so we can play with it
+				var mrUrl = safari.application.activeBrowserWindow.activeTab.url;
+				
+				// if the last character is a slash, kill it
+				if (mrUrl.substring(mrUrl.length - 1) === "/") {
+					mrUrl = mrUrl.slice(0, mrUrl.length - 1);
+				}
+				
+				// if there is in fact a parent directory, go to it
+				// (where here we're starting the search for a slash at a point after the
+				// initial slashes (ie https:// or file:///), giving a bit of extra room
+				// just in case I forgot some long prefix or whatevsies) 
+				if (mrUrl.indexOf("/", 10) != -1) {
+					// strip off the last file/directory name
+					mrUrl = mrUrl.slice(0, mrUrl.lastIndexOf("/"));
+					// todo: append trailing slash mebbe?
+				
+					// we should now have the parent directory, so navigate there
+					safari.application.activeBrowserWindow.activeTab.url = mrUrl;
+				}
+			}
+		}
+		
+		// set up the listener
+		safari.application.addEventListener("command", performCommand, false);
+		
+		
+		
+		
+		
+		
+		// v0.7 will feature:
+		// √ checking to make sure there's a valid parent directory
+		// maybe appending a trailing slash (maybe not)
+		// x accessibility via menu item
+		
+		// v1.0 will feature:
+		// preferences to at least toggle contextual menu item and regular menu item
+		// redesigned logo
+		// holding the button to get a drop-down menu of the whole hierarchy
+		// maybe some modifier or something to open in a new tab
+		
+		
+		
+	</script>
+</head>
+<body>
+</body>
+</html>

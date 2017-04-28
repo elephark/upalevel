@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>Elephark</string>
+	<key>Builder Version</key>
+	<string>12603.1.30.0.34</string>
+	<key>CFBundleDisplayName</key>
+	<string>upalevel</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.elephark.upalevel</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.7</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>Chrome</key>
+	<dict>
+		<key>Context Menu Items</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>goUp</string>
+				<key>Identifier</key>
+				<string>goUp</string>
+				<key>Title</key>
+				<string>Go to Parent Directory</string>
+			</dict>
+		</array>
+		<key>Global Page</key>
+		<string>global.html</string>
+		<key>Toolbar Items</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>goUp</string>
+				<key>Identifier</key>
+				<string>goUp</string>
+				<key>Image</key>
+				<string>icon.png</string>
+				<key>Include By Default</key>
+				<true/>
+				<key>Label</key>
+				<string>upalevel</string>
+				<key>Tool Tip</key>
+				<string>Go to parent directory</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Description</key>
+	<string>Go to a page's parent directory</string>
+	<key>DeveloperIdentifier</key>
+	<string>0000000000</string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict>
+			<key>Include Secure Pages</key>
+			<true/>
+			<key>Level</key>
+			<string>All</string>
+		</dict>
+	</dict>
+	<key>Website</key>
+	<string>https://github.com/elephark/upalevel</string>
+</dict>
+</plist>
